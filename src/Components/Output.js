@@ -154,7 +154,7 @@ const Output = ({ showMore, countries, singleCountry, displaySingleCountry }) =>
                             <p>{getLanguages(singleCountry[0].languages)}</p>
                             <h3>Car sign:</h3>
                             <p>{getCarSigns(singleCountry[0].car.signs)}</p>
-                            <h3>Side of driving:</h3>
+                            <h3>Driving side:</h3>
                             <p>{haveInfo(singleCountry[0].car.side)}</p>
                             <h3>Coat of arms:</h3>
                             {
