@@ -90,6 +90,19 @@ const Output = ({ showMore, countries, singleCountry, displaySingleCountry }) =>
         }
     };
 
+    const getCapital = (info) => {
+        if (info === undefined) {
+            return "-------------";
+        } else {
+            const capital = Object.values(info);
+            if (capital.length === 1) {
+                return capital[0];
+            } else {
+                return capital.join(', ');
+            }
+        }
+    };
+
     return (
         <>
             {
@@ -107,7 +120,7 @@ const Output = ({ showMore, countries, singleCountry, displaySingleCountry }) =>
                                         <h3>Official name:</h3>
                                         <p>{haveInfo(item.name.official)}</p>
                                         <h3>Capital:</h3>
-                                        <p>{haveInfo(item.capital)}</p>
+                                        <p>{getCapital(item.capital)}</p>
                                         <h3>Region:</h3>
                                         <p>{haveInfo(item.region)}</p>
                                         <h3>Population:</h3>
@@ -133,7 +146,7 @@ const Output = ({ showMore, countries, singleCountry, displaySingleCountry }) =>
                             <h3>Official name:</h3>
                             <p>{haveInfo(singleCountry[0].name.official)}</p>
                             <h3>Capital:</h3>
-                            <p>{haveInfo(singleCountry[0].capital)}</p>
+                            <p>{getCapital(singleCountry[0].capital)}</p>
                             <h3>Region:</h3>
                             <p>{haveInfo(singleCountry[0].region)}</p>
                             <h3>Subregion:</h3>
