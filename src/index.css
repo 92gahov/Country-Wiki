@@ -158,6 +158,11 @@ body {
   font-size: 17px;
 }
 
+.single-country-info a {
+  color: blue;
+  font-weight: bold;
+}
+
 .coat-of-arms {
   width: 160px;
   height: 160px;
