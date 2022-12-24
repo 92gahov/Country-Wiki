@@ -103,6 +103,15 @@ const Output = ({ showMore, countries, singleCountry, displaySingleCountry }) =>
         }
     };
 
+    const getNativeName = (info) => {
+        if (info === undefined) {
+            return "-------------";
+        } else {
+            const nativeName = Object.values(info);
+            return nativeName[0].official;
+        }
+    };
+
     return (
         <>
             {
@@ -145,6 +154,8 @@ const Output = ({ showMore, countries, singleCountry, displaySingleCountry }) =>
                             <div className='underline'></div>
                             <h3>Official name:</h3>
                             <p>{haveInfo(singleCountry[0].name.official)}</p>
+                            <h3>Native name:</h3>
+                            <p>{getNativeName(singleCountry[0].name.nativeName)}</p>
                             <h3>Capital:</h3>
                             <p>{getCapital(singleCountry[0].capital)}</p>
                             <h3>Region:</h3>
