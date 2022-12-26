@@ -1,6 +1,9 @@
 import React from 'react';
 
-const Output = ({ showMore, countries, singleCountry, displaySingleCountry }) => {
+const Output = ({ showMore,
+    countries,
+    singleCountry,
+    displaySingleCountry }) => {
 
     const toThousands = (number) => {
         if (number === undefined) {
@@ -79,7 +82,7 @@ const Output = ({ showMore, countries, singleCountry, displaySingleCountry }) =>
     };
 
     const getCarSigns = (info) => {
-        if (info === undefined) {
+        if (info == "") {
             return "-------------";
         } else {
             if (info.length === 1) {
