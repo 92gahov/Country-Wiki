@@ -1,4 +1,4 @@
-## Simple App made with React. It provides info like capital, region, currency, location on map, etc. for all countries.
+## Country Wiki.
 
 <img src="img/country.PNG" width="600" height="400">
 
